@@ -13,12 +13,13 @@ const HeroesList = (props) => {
         try {
             heroesForShow = heroes.map( (hero, index) =>(
                 <Hero
-                    number={index + 1}
-                    nickname={hero.nickname}
-                    image={hero.image}
-                    data={hero}
-                    del={props.del}
-                    edit={props.edit} />
+                    key = {"hero" + index}
+                    number = {index + 1}
+                    nickname = {hero.nickname}
+                    image = {hero.images ? hero.images[0] : null}
+                    data = {hero}
+                    del = {props.del}
+                    edit = {props.edit} />
             ));
         } catch (e) {
             console.error('Error with heroes data!');
@@ -26,11 +27,6 @@ const HeroesList = (props) => {
     } else {
         heroesForShow = <h2>There are no heroes to display!</h2>
     }
-
-
-
-
-
 
     return (
         <div className="heroes-list">

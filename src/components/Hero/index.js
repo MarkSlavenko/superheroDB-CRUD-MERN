@@ -1,13 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import "./hero.css"
 
 const Hero = (props) => {
 
     const {number, nickname, image, data, del, edit} = props;
 
+    const addDefaultSrc = (ev)=> {
+        ev.target.src = "./images/def.jpg"
+    };
+
     return (
         <div className="hero">
-        <p>{number} Hero nickname: {nickname}</p>
+            <div className="heroImage">
+                <img onError={addDefaultSrc} src={image}/>
+            </div>
+            <div  className="heroNickname">{number}: {nickname}</div>
         </div>
     );
 }
