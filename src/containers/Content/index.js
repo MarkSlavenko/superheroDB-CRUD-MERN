@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import './Content.css';
 import HeroesList from "../../components/HeroesList";
 import Pagination from "../../components/Pagination";
+import heroes from "../../tempDB";
 
 class Content extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
             <div className="content">
-                <HeroesList/>
+                <HeroesList
+                    heroes={heroes}
+                />
                 <Pagination/>
             </div>
         );
