@@ -1,0 +1,10 @@
+.notFound {
+    justify-content: center;
+    display: flex;
+}
+
+.notFound h1 {
+    background-color: red;
+    padding: 15px 25px;
+    border-radius: 40px;
+}

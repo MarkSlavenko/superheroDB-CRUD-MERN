@@ -2,6 +2,7 @@ import React from 'react';
 import "./heroesList.css";
 import PropTypes from 'prop-types';
 import Hero from "../Hero";
+import Pagination from "../../components/Pagination";
 
 const HeroesList = (props) => {
 
@@ -31,6 +32,7 @@ const HeroesList = (props) => {
     return (
         <div className="heroes-list">
             {heroesForShow}
+            <Pagination/>
         </div>
     );
 }

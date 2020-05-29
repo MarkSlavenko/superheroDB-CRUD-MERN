@@ -4,7 +4,7 @@ import './footer.css';
 const Footer = (props) => {
     return (
         <footer>
-            Author: Mark Slavenko
+            Author: <a href="https://github.com/MarkSlavenko">Mark Slavenko</a>
         </footer>
     );
 }

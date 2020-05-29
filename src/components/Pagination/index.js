@@ -4,7 +4,7 @@ import "./pagination.css"
 const Pagination = (props) => {
     return (
         <div className="pagination">
-            Pagingation 1 2 3
+            1 2 3 ...
         </div>
     );
 }
