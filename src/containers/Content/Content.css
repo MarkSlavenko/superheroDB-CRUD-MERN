@@ -1,9 +1,11 @@
 .content {
+    display: flex;
     flex: 1 0 auto;
     text-align: center;
     justify-content: center;
     flex-direction: column;
     margin-top: 25px;
     margin-bottom: 30px;
+    justify-self: center;
 }
 

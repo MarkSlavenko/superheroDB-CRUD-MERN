@@ -11,14 +11,15 @@ import api from '../../API'
 
 class Content extends Component {
 
-    constructor(props) {
-        super(props)
-    }
-
     addHero = async (params) => {
         await api.insertHero(params).then(res => {
             window.alert(`Hero added successfully!`)
         })
+    };
+
+    getHero = (id) => {
+        const res = api.getHeroById(id);
+        return(res);
     };
 
 
@@ -35,12 +36,12 @@ class Content extends Component {
                     <Route
                         exact
                         path='/edit/:id'
-                        component={() => <EditHero/>}
+                        component={(props) => <EditHero {...props}/>}
                     />
                     <Route
                         exact
                         path='/hero/:id'
-                        component={() => <ViewHero/>}
+                        component={(props) => <ViewHero getHero={this.getHero}{...props}/>}
                     />
                     <Route exact path='/add' component={() => <AddHero addHero={this.addHero}/>}/>
                     <Route component={NotFound} />

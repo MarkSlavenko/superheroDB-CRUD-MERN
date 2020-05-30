@@ -8,6 +8,7 @@ import heroes from "../tempDB";
 
 export const initialState = {
     heroesList: heroes,
+    page: 1,
 };
 
 

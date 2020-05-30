@@ -15,6 +15,7 @@ const HeroesList = (props) => {
             heroesForShow = heroes.map( (hero, index) =>(
                 <Hero
                     key = {"hero" + index}
+                    id = {hero._id}
                     number = {index + 1}
                     nickname = {hero.nickname}
                     image = {hero.images ? hero.images[0] : null}/>

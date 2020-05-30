@@ -19,12 +19,12 @@ const Hero = (props) => {
             <div className="heroInfo">
                 <div  className="heroNickname">{number}: {nickname}</div>
                 <div  className="heroButtons">
-                    <Link to='/hero/:id'
+                    <Link to='/hero/id'
                           className="btn btn-view"
                           role="button">
                         View
                     </Link>
-                    <Link to='/edit/:id'
+                    <Link to='/edit/id'
                           className="btn btn-edit"
                           role="button">
                         Edit
