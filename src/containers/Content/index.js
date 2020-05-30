@@ -7,12 +7,21 @@ import NotFound from "../../components/NotFound";
 import AddHero from "../../components/AddHero";
 import EditHero from "../../components/EditHero";
 import ViewHero from "../../components/ViewHero";
+import api from '../../API'
 
 class Content extends Component {
 
     constructor(props) {
         super(props)
     }
+
+    addHero = async (params) => {
+        await api.insertHero(params).then(res => {
+            window.alert(`Hero added successfully!`)
+        })
+    };
+
+
 
     render() {
         return (
@@ -33,7 +42,7 @@ class Content extends Component {
                         path='/hero/:id'
                         component={() => <ViewHero/>}
                     />
-                    <Route exact path='/add' component={AddHero}/>
+                    <Route exact path='/add' component={() => <AddHero addHero={this.addHero}/>}/>
                     <Route component={NotFound} />
                 </Switch>
             </div>
