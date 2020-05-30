@@ -23,8 +23,45 @@
     border-radius: 10px;
 }
 
-.heroNickname {
+.heroInfo {
     flex-grow: 1;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.heroNickname {
     font-size: 2.3em;
 }
+
+.heroButtons {
+    margin-top: 25px;
+    justify-content: space-around;
+    display: flex;
+}
+
+.heroButtons .btn {
+    padding: 7px 15px;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+}
+
+.heroButtons .btn:hover {
+    filter: brightness(.85);
+}
+
+.heroButtons .btn-view {
+    background-color: #2ecc71;
+}
+
+.heroButtons .btn-edit {
+    background-color: #fff200;
+}
+
+.heroButtons .btn-delete {
+    background-color: #ff3838;
+}
+

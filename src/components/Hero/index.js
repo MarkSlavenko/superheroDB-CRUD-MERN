@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import "./hero.css"
+import {Link} from "react-router-dom";
 
 const Hero = (props) => {
 
-    const {number, nickname, image, data, del, edit} = props;
+    const {number, nickname, image, id, delFunc} = props;
 
     const addDefaultSrc = (ev)=> {
         ev.target.src = "./images/def.jpg"
@@ -15,17 +16,36 @@ const Hero = (props) => {
             <div className="heroImage">
                 <img onError={addDefaultSrc} src={image}/>
             </div>
-            <div  className="heroNickname">{number}: {nickname}</div>
+            <div className="heroInfo">
+                <div  className="heroNickname">{number}: {nickname}</div>
+                <div  className="heroButtons">
+                    <Link to='/hero/:id'
+                          className="btn btn-view"
+                          role="button">
+                        View
+                    </Link>
+                    <Link to='/edit/:id'
+                          className="btn btn-edit"
+                          role="button">
+                        Edit
+                    </Link>
+                    <Link onClick={() => delFunc(id)}
+                          className="btn btn-delete"
+                          role="button">
+                        Delete
+                    </Link>
+                </div>
+            </div>
         </div>
     );
 }
 
 Hero.propTypes = {
+    number: PropTypes.number.isRequired,
     nickname : PropTypes.string.isRequired,
     image: PropTypes.string,
-    data: PropTypes.object.isRequired,
-    del: PropTypes.func.isRequired,
-    edit: PropTypes.func.isRequired
+    id: PropTypes.string.isRequired,
+    delFunc: PropTypes.func.isRequired,
 }
 
 export default Hero;
