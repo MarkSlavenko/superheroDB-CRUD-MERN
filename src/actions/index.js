@@ -5,7 +5,7 @@ import {
     SET_LOADING
 } from '../constants/index.js';
 
-import api, {getHeroes} from '../API';
+import {getHeroes} from '../API';
 
 export const setPage = page => {
     return({
@@ -45,7 +45,7 @@ export const changePage = (page) => {
 const loadContent = (page = 1) => {
     return (dispatch) => {
         dispatch(isLoading(true));
-        api.getHeroes(page)
+        getHeroes(page)
             .then(heroes => {
             if (heroes.length === 0) {
                 dispatch(isLoading(false));

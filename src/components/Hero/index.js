@@ -4,7 +4,6 @@ import "./hero.css"
 import {Link} from "react-router-dom";
 
 const Hero = (props) => {
-    console.log(props);
     let {number, nickname, image, id} = props;
 
 

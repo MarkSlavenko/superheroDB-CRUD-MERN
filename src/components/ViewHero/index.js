@@ -48,10 +48,10 @@ class ViewHero extends Component {
                 !this.state.isLoading ?
                 <div  className="viewHero">
                     <h2><span className="title"> Hero nickname</span> {nickname}</h2>
-                    <h2><span className="title">Hero real name</span>{real_name}</h2>
-                    <h2><span className="title">Superpowers</span>{superpowers}</h2>
-                    {catch_phrase && <h2><span className="title">Catch phrase</span>{catch_phrase}</h2>}
-                    <h2><span className="title">Hero origin description</span>{origin_description}</h2>
+                    <h2><span className="title">Hero real name</span> {real_name}</h2>
+                    <h2><span className="title">Superpowers</span> {superpowers}</h2>
+                    {catch_phrase && <h2><span className="title">Catch phrase</span> {catch_phrase}</h2>}
+                    <h2><span className="title">Hero origin description</span> {origin_description}</h2>
                     <div className="viewHero-links">
                         <Link to={'/edit/' + this.state.id}
                               className="btn btn-edit"

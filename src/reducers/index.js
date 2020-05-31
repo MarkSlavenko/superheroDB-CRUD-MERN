@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import heroes from "../tempDB";
 
 import {
     SET_TOTAL_PAGES,
