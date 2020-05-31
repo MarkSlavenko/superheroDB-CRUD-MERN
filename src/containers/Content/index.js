@@ -64,7 +64,9 @@ class Content extends Component {
                     <Route
                         exact
                         path='/edit/:id'
-                        component={(props) => <EditHero {...props}/>}
+                        component={(props) => <EditHero
+                            getHero={api.getHeroById}
+                            {...props}/>}
                     />
                     <Route
                         exact
