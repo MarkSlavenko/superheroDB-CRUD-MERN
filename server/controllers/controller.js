@@ -106,7 +106,24 @@ getHeroById = async (req, res) => {
 };
 
 getHeroes = async (req, res) => {
-    await Hero.find({}, (err, heroes) => {
+
+    const body = req.body;
+
+    if (!body) {
+        return res.status(400).json({
+            success: false,
+            error: 'You must provide a page!',
+        })
+    }
+    const perPage = 5;
+    const page = req.params.page - 1;
+
+    await Hero.find({})
+        .select('nickname')
+        .select('images')
+        .limit(perPage)
+        .skip(perPage * page)
+        .exec((err, heroes) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }

@@ -5,11 +5,15 @@ import {Link} from "react-router-dom";
 
 const Hero = (props) => {
 
-    const {number, nickname, image, id, delFunc} = props;
+    let {number, nickname, image, id, delFunc} = props;
 
     const addDefaultSrc = (ev)=> {
         ev.target.src = "./images/def.jpg"
     };
+
+    if (!image) {
+        image = "";
+    }
 
     return (
         <div className="hero">
@@ -19,12 +23,12 @@ const Hero = (props) => {
             <div className="heroInfo">
                 <div  className="heroNickname">{number}: {nickname}</div>
                 <div  className="heroButtons">
-                    <Link to='/hero/id'
+                    <Link to={'/hero/' + id}
                           className="btn btn-view"
                           role="button">
                         View
                     </Link>
-                    <Link to='/edit/id'
+                    <Link to={'/edit/' + id}
                           className="btn btn-edit"
                           role="button">
                         Edit
@@ -38,7 +42,7 @@ const Hero = (props) => {
             </div>
         </div>
     );
-}
+};
 
 Hero.propTypes = {
     number: PropTypes.number.isRequired,
@@ -46,6 +50,6 @@ Hero.propTypes = {
     image: PropTypes.string,
     id: PropTypes.string.isRequired,
     delFunc: PropTypes.func.isRequired,
-}
+};
 
 export default Hero;

@@ -1,19 +1,44 @@
 import { combineReducers } from 'redux';
 import heroes from "../tempDB";
 
-// import {
-//
-// } from '../constants/index.js';
+import {
+    SET_TOTAL_PAGES,
+    SET_PAGE,
+    SET_HEROES,
+    SET_LOADING
+} from '../constants/index.js';
+
 
 
 export const initialState = {
-    heroesList: heroes,
+    heroesList: null,
     page: 1,
+    isLoading: false,
+    totalPages: 'Calculation'
 };
 
 
 export const Content = (store = initialState, action) => {
-            return store
+    switch (action.type) {
+        case SET_TOTAL_PAGES :
+            return {...store,
+                totalPages: action.totalPages
+            };
+        case SET_PAGE :
+            return {...store,
+                page: action.page
+            };
+        case SET_HEROES :
+            return {...store,
+                heroesList: action.heroesList
+            };
+        case SET_LOADING :
+            return {...store,
+                isLoading: action.isLoading
+            };
+        default :
+            return store;
+    }
 };
 
 
