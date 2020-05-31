@@ -136,10 +136,26 @@ getHeroes = async (req, res) => {
     }).catch(err => console.log(err))
 };
 
+getTotalPages = async (req, res) => {
+    await Hero.count({}, (err, heroes) => {
+        if (err) {
+            return res.status(400).json({ success: false, error: err })
+        }
+        if (!heroes) {
+            return res
+                .status(404)
+                .json({ success: false, error: `Heroes not found` })
+        }
+
+        return res.status(200).json({ success: true, data: heroes })
+    }).catch(err => console.log(err))
+};
+
 module.exports = {
     createHero,
     updateHero,
     deleteHero,
     getHeroById,
-    getHeroes
+    getHeroes,
+    getTotalPages
 };

@@ -11,7 +11,7 @@ import {
 
 export const initialState = {
     heroesList: null,
-    page: 1,
+    page: 2,
     isLoading: false,
     totalPages: 'Calculation'
 };

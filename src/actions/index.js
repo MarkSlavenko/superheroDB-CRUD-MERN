@@ -5,7 +5,7 @@ import {
     SET_LOADING
 } from '../constants/index.js';
 
-import {getHeroes} from '../API';
+import {getHeroes, getTotalPages} from '../API';
 
 export const setPage = page => {
     return({
@@ -64,7 +64,18 @@ const loadContent = (page = 1) => {
 };
 
 export const setLoading = (loading) => {
-    return (dispatch, getState) => {
+    return (dispatch) => {
         dispatch(isLoading(loading));
     }
+};
+
+export const TotalPages = () => {
+  return (dispatch) => {
+      getTotalPages()
+          .then(res => {
+              const totalHeroes = res.data.data;
+              const totalPages = Math.ceil(totalHeroes/5)
+              dispatch(setTotalPages(totalPages));
+          });
+  }
 };

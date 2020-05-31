@@ -16,7 +16,7 @@ const HeroesList = (props) => {
                 <Hero
                     key = {"hero" + index}
                     id = {hero._id}
-                    number = {(props.page-1)*5 + index + 1}
+                    number = {(props.currentPage-1)*5 + index + 1}
                     nickname = {hero.nickname}
                     image = {hero.images ? hero.images[0] : null}
                     delHero={props.delHero}
@@ -30,15 +30,23 @@ const HeroesList = (props) => {
     }
 
     return (
-        <div className="heroes-list">
+        <div>
+        {!props.isLoading ?
+            <div className="heroes-list">
             {heroesForShow}
-            <Pagination/>
-        </div>
-    );
-}
+            <Pagination
+                totalPages={props.totalPages}
+                currentPage={props.currentPage}
+                changePage={props.changePage}
+            />
+            </div>
+            : <h1>Loading...</h1>}
+            </div>
+    )
+};
 
 HeroesList.propTypes = {
     heroes: PropTypes.array.isRequired
-}
+};
 
 export default HeroesList;

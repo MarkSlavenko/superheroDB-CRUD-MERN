@@ -11,31 +11,32 @@ import api from '../../API';
 
 import {
     changePage,
-    setLoading
+    setLoading,
+    TotalPages
 } from '../../actions';
 
 class Content extends Component {
 
-    page = 1;
-
     componentDidMount = async () => {
-        this.props.onChangePage(this.page);
+        this.props.onChangePage(this.props.currentPage);
+        this.props.getTotalPages();
     };
 
     addHero = async (params) => {
         await api.insertHero(params).then(res => {
             window.alert(`Hero added successfully!`)
-        })
+        });
+        this.props.onChangePage(this.props.currentPage);
     };
 
-    deleteHero = (id , nickname) => {
+    deleteHero = async (id , nickname) => {
         if (
             window.confirm(
                 `Do you really want to delete the hero ${nickname} with id: ${id}?`,
             )
         ) {
-            api.deleteHeroById(id);
-            window.location.reload();
+            await api.deleteHeroById(id);
+            this.props.onChangePage(this.props.currentPage);
         }
     };
 
@@ -43,23 +44,30 @@ class Content extends Component {
     render() {
         return (
                 <div className="content">
-                    {!this.props.isLoading ?
                 <Switch>
                     <Route
                         exact
                         path='/'
                         component={() => <HeroesList
                             delHero={this.deleteHero}
-                            page={this.page}
-                            heroes={this.props.heroesList} />}
+                            currentPage={this.props.currentPage}
+                            heroes={this.props.heroesList}
+                            totalPages={this.props.totalPages}
+                            changePage={this.props.onChangePage}
+                            isLoading={this.props.isLoading}
+                        />}
                     />
                     <Route
                         exact
                         path='/page=:page'
                         component={() => <HeroesList
                             delHero={this.deleteHero}
-                            page={this.page}
-                            heroes={this.props.heroesList} />}
+                            currentPage={this.props.currentPage}
+                            heroes={this.props.heroesList}
+                            totalPages={this.props.totalPages}
+                            changePage={this.props.onChangePage}
+                            isLoading={this.props.isLoading}
+                        />}
                     />
                     <Route
                         exact
@@ -67,6 +75,7 @@ class Content extends Component {
                         component={(props) => <EditHero
                             getHero={api.getHeroById}
                             editHero={api.updateHeroById}
+                            changePage={()=>this.props.onChangePage(this.props.currentPage)}
                             {...props}/>}
                     />
                     <Route
@@ -81,7 +90,6 @@ class Content extends Component {
                     <Route exact path='/add' component={() => <AddHero addHero={this.addHero}/>}/>
                     <Route component={NotFound} />
                 </Switch>
-                    : <h1>Loading...</h1>}
             </div>
         );
     }
@@ -91,7 +99,9 @@ class Content extends Component {
 const mapStateToProps = store => {
     return {
         heroesList: store.content.heroesList,
-        isLoading: store.content.isLoading
+        isLoading: store.content.isLoading,
+        totalPages: store.content.totalPages,
+        currentPage: store.content.page
     }
 };
 
@@ -102,6 +112,9 @@ function mapDispatchToProps(dispatch) {
         },
         setLoading: (loading) => {
             dispatch(setLoading(loading))
+        },
+        getTotalPages: () => {
+            dispatch(TotalPages())
         }
     })
 }

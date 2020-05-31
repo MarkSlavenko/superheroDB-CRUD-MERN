@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "./editHero.css"
 import HeroFields from "../HeroFields";
-import api from "../../API";
 
 class EditHero extends Component {
 
@@ -18,7 +17,8 @@ class EditHero extends Component {
 
     editHero = async (params) => {
         await this.props.editHero(this.state.id, params).then(res => {
-            window.alert(`Hero successfully edited!`)
+            this.props.changePage();
+            window.alert(`Hero successfully edited!`);
         })
     };
 

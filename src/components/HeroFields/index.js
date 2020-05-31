@@ -127,7 +127,7 @@ render () {
                         <Link to='/'
                               className="buttons btn-cancel"
                               role="button">
-                            &#8592; Cancel
+                            &#8592; Back
                         </Link>
                     </form>
                 </div>
