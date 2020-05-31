@@ -16,7 +16,7 @@ import {
 
 class Content extends Component {
 
-    page = 2;
+    page = 1;
 
     componentDidMount = async () => {
         this.props.onChangePage(this.page);
@@ -66,6 +66,7 @@ class Content extends Component {
                         path='/edit/:id'
                         component={(props) => <EditHero
                             getHero={api.getHeroById}
+                            editHero={api.updateHeroById}
                             {...props}/>}
                     />
                     <Route

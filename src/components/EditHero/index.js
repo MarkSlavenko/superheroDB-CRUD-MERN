@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./editHero.css"
 import HeroFields from "../HeroFields";
+import api from "../../API";
 
 class EditHero extends Component {
 
@@ -14,6 +15,12 @@ class EditHero extends Component {
             isLoading: false
         }
     }
+
+    editHero = async (params) => {
+        await this.props.editHero(this.state.id, params).then(res => {
+            window.alert(`Hero successfully edited!`)
+        })
+    };
 
     componentDidMount () {
         this.setState({
@@ -53,6 +60,7 @@ class EditHero extends Component {
                                 origin_description = {origin_description}
                                 superpowers = {superpowers}
                                 catch_phrase = {catch_phrase}
+                                editHero={this.editHero}
                             />
                         </div>
                         : <h1>Loading...</h1>

@@ -1,19 +1,21 @@
-.form-style{
+.form-style {
     max-width: 600px;
     margin: 50px auto;
 }
-.form-style ul{
-    padding:0;
-    margin:0;
-    list-style:none;
-}
-.form-style ul li{
+
+.form-style label {
     display: block;
-    margin: 20px 25px;
-    min-height: 55px;
+    margin: 0 0 15px 0;
+}
+.form-style label > span {
+    width: 25%;
+    font-weight: bold;
+    float: left;
+    padding-top: 13px;
+    padding-right: 5px;
 }
 
-.form-style ul li  .field-style {
+.form-style .input-field, .form-style .select-field{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -27,26 +29,12 @@
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
+    width: 72%;
 }
 
-.form-style ul li  .field-style:focus{
-    border:2px solid #B0CFE0;
-}
-.form-style ul li .field-split{
-    width: 48%;
-}
-.form-style ul li .field-full{
-    width: 100%;
-}
-.form-style ul li input.align-left{
-    float:left;
-}
-.form-style ul li input.align-right{
-    float:right;
-}
-.form-style ul li textarea{
-    width: 100%;
-    height: 100px;
+.form-style .textarea-field {
+    height:100px;
+    width: 55%;
 }
 
 .buttons {
@@ -63,6 +51,7 @@
 
 .buttons:hover {
     filter: brightness(.85);
+    cursor:pointer;
 }
 
 .btn-add {
@@ -76,3 +65,4 @@
 .btn-cancel {
     background-color: #ff3838;
 }
+

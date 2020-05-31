@@ -1,21 +1,49 @@
-import React from 'react';
+import React, {Component} from 'react';
 import "./heroFields.css"
 import {Link} from "react-router-dom";
 
-const HeroFields = (props) => {
+class HeroFields extends Component {
 
-    const resetForm = (e) => {
-        for (let i = 0; i < 5; i++) {
-            e.target[i].value = "";
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            nickname: props.nickname,
+            real_name: props.real_name,
+            superpowers: props.superpowers,
+            catch_phrase: props.catch_phrase,
+            origin_description: props.origin_description
         }
+    }
+
+    handleChangeInputNickName = async event => {
+        const nickname = event.target.value;
+        this.setState({ nickname })
     };
 
-    const dataFromForm = (e) => {
-        const nickname = e.target[0].value;
-        const real_name = e.target[1].value;
-        const superpowers = e.target[2].value;
-        const catch_phrase = e.target[3].value;
-        const origin_description = e.target[4].value;
+    handleChangeInputRealName = async event => {
+        const real_name = event.target.value;
+        this.setState({ real_name })
+    };
+
+    handleChangeInputSuperpowers = async event => {
+        const superpowers = event.target.value;
+        this.setState({ superpowers })
+    };
+
+    handleChangeInputCatchPhrase = async event => {
+        const catch_phrase = event.target.value;
+        this.setState({ catch_phrase })
+    };
+
+    handleChangeInputOriginDescription = async event => {
+        const origin_description = event.target.value;
+        this.setState({ origin_description })
+    };
+
+
+    dataFromForm = () => {
+        let {nickname, real_name, superpowers, catch_phrase, origin_description} = this.state;
 
         let data = {nickname, real_name, superpowers, catch_phrase, origin_description};
         Object.keys(data).forEach((key) =>
@@ -24,57 +52,88 @@ const HeroFields = (props) => {
         return data;
     };
 
-    const handleSubmit = (e) => {
-        const params = dataFromForm(e);
-        if( props.addHero) {
-            props.addHero(params);
-            resetForm(e);
-        } else if (props.editHero){
-            props.editHero(params);
+    handleSubmit = (e) => {
+        const params = this.dataFromForm();
+        if( this.props.addHero) {
+            this.props.addHero(params);
+            this.setState({
+                nickname: '',
+                real_name: '',
+                superpowers: '',
+                catch_phrase: '',
+                origin_description: ''
+            });
+        } else if (this.props.editHero){
+            this.props.editHero(params);
         } else {
             window.alert("Something went wrong!")
         }
         e.preventDefault();
     };
 
+render () {
+        return (
+            <div className="heroFields">
+                <div className="form-style">
+                    <form onSubmit={this.handleSubmit}>
+                        <label htmlFor="field1">
+                            <span>Nickname</span>
+                            <input type="text"
+                                   name="field1"
+                                   className="input-field"
+                                   onChange={this.handleChangeInputNickName}
+                                   value={this.state.nickname}
+                                   required/>
+                        </label>
+                        <label htmlFor="field2">
+                            <span>Real name</span>
+                            <input type="text"
+                                   name="field2"
+                                   className="input-field"
+                                   onChange={this.handleChangeInputRealName}
+                                   value={this.state.real_name}
+                                   required/>
+                        </label>
+                        <label htmlFor="field3">
+                            <span>Superpowers</span>
+                            <input type="text"
+                                   name="field3"
+                                   className="input-field"
+                                   onChange={this.handleChangeInputSuperpowers}
+                                   value={this.state.superpowers}
+                                   required/>
+                        </label>
+                        <label htmlFor="field4">
+                            <span>Catch phrase</span>
+                            <input type="text"
+                                   name="field3"
+                                   className="input-field"
+                                   onChange={this.handleChangeInputCatchPhrase}
+                                   value={this.state.catch_phrase}/>
+                        </label>
+                        <label htmlFor="field5">
+                            <span>Origin description</span>
+                            <textarea name="field5"
+                                      className="input-field"
+                                      onChange={this.handleChangeInputOriginDescription}
+                                      value={this.state.origin_description}
+                                      rows="6"
+                                      required></textarea>
+                        </label>
 
-    return (
-        <div className="heroFields">
-            <form className="form-style" onSubmit={handleSubmit}>
-                <ul>
-                    <li>
-                        <input type="text" name="field1" className="field-style field-split align-left"
-                               placeholder="Nickname" value={props.nickname} required/>
-                        <input type="text" name="field2" className="field-style field-split align-right"
-                               placeholder="Real name" value={props.real_name} required/>
-
-                    </li>
-                    <li>
-                        <input type="text" name="field3" className="field-style field-full align-none"
-                               placeholder="Superpowers" value={props.superpowers} required/>
-                    </li>
-                    <li>
-                        <input type="text" name="field3" className="field-style field-full align-none"
-                               placeholder="Catch phrase" value={props.catch_phrase}/>
-                    </li>
-                    <li>
-                        <textarea name="field5" className="field-style" placeholder="Origin description"
-                                  value={props.origin_description} required></textarea>
-                    </li>
-                    <li>
                         <input type="submit"
-                               className={"buttons " + (props.addHero ? "btn-add" : "btn-edit")}
-                               value={props.addHero ? "Add" : "Edit"}/>
+                               className={"buttons " + (this.props.addHero ? "btn-add" : "btn-edit")}
+                               value={this.props.addHero ? "Add" : "Edit"}/>
                         <Link to='/'
                               className="buttons btn-cancel"
                               role="button">
                             &#8592; Cancel
                         </Link>
-                    </li>
-                </ul>
-            </form>
-        </div>
-    )
+                    </form>
+                </div>
+            </div>
+        )
+    }
 };
 
 export default HeroFields;
