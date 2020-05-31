@@ -16,9 +16,11 @@ const HeroesList = (props) => {
                 <Hero
                     key = {"hero" + index}
                     id = {hero._id}
-                    number = {index + 1}
+                    number = {(props.page-1)*5 + index + 1}
                     nickname = {hero.nickname}
-                    image = {hero.images ? hero.images[0] : null}/>
+                    image = {hero.images ? hero.images[0] : null}
+                    delHero={props.delHero}
+                />
             ));
         } catch (e) {
             console.error('Error with heroes data!');

@@ -10,12 +10,15 @@ class ViewHero extends Component {
         this.state = {
             id: this.props.match.params.id,
             heroData: null,
-            isEmpty: false
+            isEmpty: false,
+            isLoading: false
         }
     }
 
     componentDidMount () {
-        this.props.setLoading(true);
+        this.setState({
+            isLoading: true
+        });
 
         const {id} = this.state;
 
@@ -24,16 +27,14 @@ class ViewHero extends Component {
                 if (res.status === 200) {
                     this.setState({
                         heroData: res.data.data,
-                    }, () => {
-                        this.props.setLoading(false);
+                        isLoading: false
                     })
                 }
             },
             (error) => {
                 this.setState({
                     isEmpty: true,
-                }, () => {
-                    this.props.setLoading(false);
+                    isLoading: true
                 })
             });
     };
@@ -57,7 +58,7 @@ class ViewHero extends Component {
                               role="button">
                             Edit
                         </Link>
-                        <Link
+                        <Link onClick={() => this.props.delHero(this.state.id, nickname)}
                               className="btn btn-delete"
                               role="button">
                             Delete

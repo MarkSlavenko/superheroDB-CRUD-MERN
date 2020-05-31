@@ -16,15 +16,29 @@ import {
 
 class Content extends Component {
 
-    componentDidMount() {
-        this.props.onChangePage(1);
-    }
+    page = 2;
+
+    componentDidMount = async () => {
+        this.props.onChangePage(this.page);
+    };
 
     addHero = async (params) => {
         await api.insertHero(params).then(res => {
             window.alert(`Hero added successfully!`)
         })
     };
+
+    deleteHero = (id , nickname) => {
+        if (
+            window.confirm(
+                `Do you really want to delete the hero ${nickname} with id: ${id}?`,
+            )
+        ) {
+            api.deleteHeroById(id);
+            window.location.reload();
+        }
+    };
+
 
     render() {
         return (
@@ -34,12 +48,18 @@ class Content extends Component {
                     <Route
                         exact
                         path='/'
-                        component={() => <HeroesList heroes={this.props.heroesList} />}
+                        component={() => <HeroesList
+                            delHero={this.deleteHero}
+                            page={this.page}
+                            heroes={this.props.heroesList} />}
                     />
                     <Route
                         exact
                         path='/page=:page'
-                        component={() => <HeroesList heroes={this.props.heroesList} />}
+                        component={() => <HeroesList
+                            delHero={this.deleteHero}
+                            page={this.page}
+                            heroes={this.props.heroesList} />}
                     />
                     <Route
                         exact
@@ -49,7 +69,11 @@ class Content extends Component {
                     <Route
                         exact
                         path='/hero/:id'
-                        component={(props) => <ViewHero setLoading={() => this.props.setLoading} getHero={api.getHeroById}{...props}/>}
+                        component={(props) => <ViewHero
+                            getHero={api.getHeroById}
+                            delHero={this.deleteHero}
+                            {...props}
+                        />}
                     />
                     <Route exact path='/add' component={() => <AddHero addHero={this.addHero}/>}/>
                     <Route component={NotFound} />

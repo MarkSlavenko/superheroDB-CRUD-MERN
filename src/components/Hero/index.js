@@ -4,8 +4,9 @@ import "./hero.css"
 import {Link} from "react-router-dom";
 
 const Hero = (props) => {
+    console.log(props);
+    let {number, nickname, image, id} = props;
 
-    let {number, nickname, image, id, delFunc} = props;
 
     const addDefaultSrc = (ev)=> {
         ev.target.src = "./images/def.jpg"
@@ -33,7 +34,7 @@ const Hero = (props) => {
                           role="button">
                         Edit
                     </Link>
-                    <Link onClick={() => delFunc(id)}
+                    <Link onClick={() => props.delHero(id, nickname)}
                           className="btn btn-delete"
                           role="button">
                         Delete

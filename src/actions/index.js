@@ -53,7 +53,6 @@ const loadContent = (page = 1) => {
             }
             let newHeroes = [];
             heroes.data.data.map(Hero => newHeroes.push(Hero));
-            console.log(newHeroes);
             return newHeroes;
 
         })
