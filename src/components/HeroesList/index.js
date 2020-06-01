@@ -37,7 +37,7 @@ const HeroesList = (props) => {
             <Pagination
                 totalPages={props.totalPages}
                 currentPage={props.currentPage}
-                changePage={props.changePage}
+                changePage={(page) => props.changePage(page)}
             />
             </div>
             : <h1>Loading...</h1>}

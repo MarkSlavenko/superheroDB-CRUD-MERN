@@ -3,11 +3,22 @@
     font-size: 1.25em;
 }
 
-.pagination span {
+.pagination .page{
     border-radius: 7px;
     background-color: whitesmoke;
     border: 1px solid;
     padding: 0 4px;
     margin: 0 2px;
     cursor: pointer;
+}
+
+.pagination .page-btn {
+    border-radius: 15px;
+    padding: 0 4px;
+    background-color: grey;
+}
+
+.pagination .current {
+    background-color: cornflowerblue;
+    pointer-events: none;
 }
