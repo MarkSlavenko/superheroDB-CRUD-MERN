@@ -8,9 +8,10 @@ const Heroes = new Schema(
         origin_description: { type: String, required: true },
         superpowers: { type: String, required: true },
         catch_phrase: { type: String},
-        images:  { type: [String]},
+        images: { type: [String]},
+        // imgFile: { data: Buffer, contentType: String}
     },
     { timestamps: true },
-)
+);
 
 module.exports = mongoose.model('superheroes', Heroes);

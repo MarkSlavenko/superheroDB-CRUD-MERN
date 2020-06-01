@@ -13,6 +13,7 @@ class HeroFields extends Component {
             superpowers: props.superpowers,
             catch_phrase: props.catch_phrase,
             origin_description: props.origin_description
+            // image: "",
         }
     }
 
@@ -41,6 +42,12 @@ class HeroFields extends Component {
         this.setState({ origin_description })
     };
 
+    // handleChangeInputImage = async event => {
+    //     const image = event.target.value;
+    //     console.log(image);
+    //     this.setState({ image })
+    // };
+
 
     dataFromForm = () => {
         let {nickname, real_name, superpowers, catch_phrase, origin_description} = this.state;
@@ -53,6 +60,7 @@ class HeroFields extends Component {
     };
 
     handleSubmit = (e) => {
+        // console.log(e.value[5]);
         const params = this.dataFromForm();
         if( this.props.addHero) {
             this.props.addHero(params);
@@ -61,7 +69,7 @@ class HeroFields extends Component {
                 real_name: '',
                 superpowers: '',
                 catch_phrase: '',
-                origin_description: ''
+                origin_description: '',
             });
         } else if (this.props.editHero){
             this.props.editHero(params);
@@ -120,6 +128,16 @@ render () {
                                       rows="6"
                                       required></textarea>
                         </label>
+                        {/*<label htmlFor="field5">*/}
+                            {/*<span>Images</span>*/}
+                            {/*<input type="file"*/}
+                                   {/*multiple*/}
+                                   {/*name="field6"*/}
+                                   {/*className="input-field"*/}
+                                   {/*onChange={this.handleChangeInputImage}*/}
+                                   {/*value={this.state.image}*/}
+                               {/*/>*/}
+                        {/*</label>*/}
 
                         <input type="submit"
                                className={"buttons " + (this.props.addHero ? "btn-add" : "btn-edit")}
