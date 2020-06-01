@@ -12,13 +12,14 @@ import api from '../../API';
 import {
     changePage,
     setLoading,
-    TotalPages
+    TotalPages,
+    loadContent
 } from '../../actions';
 
 class Content extends Component {
 
     componentDidMount = async () => {
-        this.props.onChangePage(this.props.currentPage);
+        this.props.loadContent();
         this.props.getTotalPages();
     };
 
@@ -48,25 +49,14 @@ class Content extends Component {
                     <Route
                         exact
                         path='/'
-                        component={() => <HeroesList
+                        component={(props) => <HeroesList
                             delHero={this.deleteHero}
                             currentPage={this.props.currentPage}
                             heroes={this.props.heroesList}
                             totalPages={this.props.totalPages}
                             changePage={this.props.onChangePage}
                             isLoading={this.props.isLoading}
-                        />}
-                    />
-                    <Route
-                        exact
-                        path='/page=:page'
-                        component={() => <HeroesList
-                            delHero={this.deleteHero}
-                            currentPage={this.props.currentPage}
-                            heroes={this.props.heroesList}
-                            totalPages={this.props.totalPages}
-                            changePage={this.props.onChangePage}
-                            isLoading={this.props.isLoading}
+                            {...props}
                         />}
                     />
                     <Route
@@ -115,6 +105,9 @@ function mapDispatchToProps(dispatch) {
         },
         getTotalPages: () => {
             dispatch(TotalPages())
+        },
+        loadContent: () => {
+            dispatch(loadContent())
         }
     })
 }

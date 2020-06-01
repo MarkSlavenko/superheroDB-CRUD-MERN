@@ -13,9 +13,9 @@ const Pagination = (props) => {
                     totalInCurRange = true;
                 }
                 if (i!== props.currentPage) {
-                    buttons.push(<span className="page" onClick={() => props.changePage(i)}>{i}</span>)
+                    buttons.push(<span key={`pagination${i}`} className="page" onClick={() => props.changePage(i)}>{i}</span>)
                 } else {
-                    buttons.push(<span className="page current" onClick={() => props.changePage(i)}>{i}</span>)
+                    buttons.push(<span key={`pagination${i}`} className="page current" onClick={() => props.changePage(i)}>{i}</span>)
                 }
             }
         }

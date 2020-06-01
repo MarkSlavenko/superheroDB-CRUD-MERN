@@ -38,14 +38,14 @@ export const isLoading = isLoading => {
 export const changePage = (page) => {
     return (dispatch, getState) => {
         dispatch(setPage(page));
-        dispatch(loadContent(page));
+        dispatch(loadContent());
     }
 };
 
-const loadContent = (page = 1) => {
-    return (dispatch) => {
+export const loadContent = () => {
+    return (dispatch, getState) => {
         dispatch(isLoading(true));
-        getHeroes(page)
+        getHeroes(getState().content.page)
             .then(heroes => {
             if (heroes.length === 0) {
                 dispatch(isLoading(false));

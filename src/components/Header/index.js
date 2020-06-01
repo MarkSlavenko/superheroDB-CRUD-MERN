@@ -7,7 +7,7 @@ const Header = (props) => {
         <header>
             <h1>Superheroes Database</h1>
             <div className="navigation">
-                <Link to='/page=1'
+                <Link to='/'
                       className="button-nav"
                       role="button">
                     All heroes

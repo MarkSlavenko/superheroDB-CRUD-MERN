@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import "./heroesList.css";
 import PropTypes from 'prop-types';
 import Hero from "../Hero";
@@ -8,6 +8,9 @@ const HeroesList = (props) => {
 
     let heroes = [];
     let heroesForShow;
+
+    // props.match && props.changePage(props.match.params.page);
+
     if (props.heroes) {
         heroes = props.heroes;
 
