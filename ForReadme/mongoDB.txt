@@ -1,0 +1,353 @@
+/* 1 */
+{
+    "_id" : ObjectId("5ed0e40ed6cc9817241141d2"),
+    "images" : [ 
+        "./images/superman1.jpg", 
+        "./images/superman2.jpg"
+    ],
+    "nickname" : "Superman",
+    "real_name" : "Clark Kent",
+    "origin_description" : "he was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction…",
+    "superpowers" : "solar energy absorption and healing factor, solar flare and heat vision, solar invulnerability, flight",
+    "catch_phrase" : "Look, up in the sky, it's a bird, it's a plane, it's Superman!",
+    "createdAt" : ISODate("2020-05-29T10:29:34.563Z"),
+    "updatedAt" : ISODate("2020-05-29T10:29:34.563Z"),
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5ed0e49cd6cc9817241141d3"),
+    "nickname" : "Spiderman",
+    "real_name" : "Peter Parker",
+    "origin_description" : "One evening, Parker attended a public exhibition demonstrating the safe handling of nuclear laboratory waste materials sponsored by the General Techtronics Corporation. During the demonstration, a small common house spider happened to be in the path of a particle accelerator's beam and was massively irradiated. The stricken spider fell on to Parker's hand, broke his skin with its fangs, and died...",
+    "superpowers" : "Accelerated healing, agility, Jump, Night vision",
+    "createdAt" : ISODate("2020-05-29T10:31:56.264Z"),
+    "updatedAt" : ISODate("2020-05-31T17:10:40.522Z"),
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5ed0e4ead6cc9817241141d4"),
+    "images" : [ 
+        "./images/flash1.png", 
+        "./images/flash2.jpg"
+    ],
+    "nickname" : "Flash",
+    "real_name" : "Jay Garrick",
+    "origin_description" : "As a boy, Jay Garrick used to read pulp magazine stories of the turn-of-the-century super-hero, Whip Whirlwind. Little did he know that he would be granted the same powers of super speed.Jay would go to Midwestern University in Keystone City where he would double-major in chemistry and physics. An experiment he was working on during his junior year was to purify hard water without an...",
+    "superpowers" : "Super speed, flight, Accelerated healing",
+    "createdAt" : ISODate("2020-05-29T10:33:14.147Z"),
+    "updatedAt" : ISODate("2020-05-29T10:33:14.147Z"),
+    "__v" : 0
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5ed0e599d6cc9817241141d5"),
+    "images" : [ 
+        "./images/batman1.jpg", 
+        "./images/batman2.jpg"
+    ],
+    "nickname" : "Batman",
+    "real_name" : "Bruce Wayne",
+    "origin_description" : "hAfter witnessing the brutal murder of his parents, billionaire Bruce Wayne dedicated himself to purging Gotham City of evil. Spending years training his mind and body to perfection, he declared war on all crime in Gotham and became The Dark Knight, Batman.",
+    "superpowers" : "Agility, Durability, Gliding, Marksmanship, Reflexes",
+    "catch_phrase" : "This city needs a hero!",
+    "createdAt" : ISODate("2020-05-29T10:36:09.187Z"),
+    "updatedAt" : ISODate("2020-05-29T10:36:09.187Z"),
+    "__v" : 0
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("5ed0e695d6cc9817241141d6"),
+    "images" : [ 
+        "./images/captainAmerica1.jpg", 
+        "./images/captainAmerica2.jpg"
+    ],
+    "nickname" : "Captain America",
+    "real_name" : "Steve Rogers",
+    "origin_description" : "In current Marvel Universe history, Steven Rogers was a sickly American fine arts student specializing in illustration in the early 1940s before America's entry into World War II. He was disturbed by the rise of the Third Reich enough to attempt to enlist only to be rejected due to his poor constitution. By chance, an Army officer looking for test subjects for a top secret defense research project.",
+    "superpowers" : "Accelerated healing, agility, Jump, Intelligence",
+    "catch_phrase" : "Look, up in the sky, it's a bird, it's a plane, it's Superman!",
+    "createdAt" : ISODate("2020-05-29T10:40:21.031Z"),
+    "updatedAt" : ISODate("2020-05-29T10:40:21.031Z"),
+    "__v" : 0
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("5ed0e6e5d6cc9817241141d7"),
+    "nickname" : "Iron man",
+    "real_name" : "Tony Stark",
+    "origin_description" : "Anthony Stark, son of industrialist and inventor Howard Stark, demonstrated his mechanical aptitude and extraordinary inventive genius at a very early age, enrolling in the undergraduate electrical engineering program at the Massachusetts Institute of Technology at the age of 15. Double majors in physics",
+    "superpowers" : "Durability, Energy absorption, flight, Energy Beams",
+    "createdAt" : ISODate("2020-05-29T10:41:41.145Z"),
+    "updatedAt" : ISODate("2020-05-31T16:26:14.437Z"),
+    "__v" : 0,
+    "catch_phrase" : "Uiiiii"
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("5ed239a6a7bb924cc4ef7a33"),
+    "images" : [],
+    "nickname" : "Hulk",
+    "real_name" : "Bruce Banner",
+    "superpowers" : "Accelerated Healing, Adaptation, Agility, Berserk Mode",
+    "origin_description" : "Robert Bruce Banner was the son of an alcoholic who deeply hated him. Banner's mother showed much affection for her child, who returned her love, but this only served to fuel his father's rage. Dr. Brian Banner was an atomic physicist who worked on producing clean nuclear power as an energy source, but he was afraid his exposure to it mutated his son's genes.",
+    "createdAt" : ISODate("2020-05-30T10:47:02.256Z"),
+    "updatedAt" : ISODate("2020-05-30T10:47:02.256Z"),
+    "__v" : 0
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("5ed2442ea7bb924cc4ef7a35"),
+    "images" : [],
+    "nickname" : "Deadpool",
+    "real_name" : "Wade Wilson",
+    "superpowers" : "Accelerated Healing, Agility, Dexterity, Dimensional Awareness",
+    "origin_description" : "Not too much is known about Deadpool's childhood. Sometime after his mother died from cancer, his father was killed by a drunken friend, and he was kicked out of the United States Army Special Forces, \"Wade\" joined Project X.Little was known of Wilson's subsequent mercenary activities. At one point he was active in Tangier, Morocco where he romanced a woman n...",
+    "createdAt" : ISODate("2020-05-30T11:31:58.432Z"),
+    "updatedAt" : ISODate("2020-05-30T11:31:58.432Z"),
+    "__v" : 0
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("5ed3aad115f50d4f70671a23"),
+    "nickname" : "Thor",
+    "real_name" : "Thor Odinson",
+    "superpowers" : "Absorption Accelerated Healing Anti-Gravity Banish",
+    "origin_description" : "Descended from Norse gods, Thor had many adventures in Earth's past. Around the year 1000 CE, he faced Hercules and time travelling Greek warriors, the vampire Varnae, the Annunaki deity Marduk, the troll Grylak the Greater, giant rats in an Atlantean outpost, visted the sons of one of the men killed by the rats, and battled Dromedan. Thor also lived as the humans Sigurd and Siegfried, slaying the... ",
+    "createdAt" : ISODate("2020-05-31T13:02:09.677Z"),
+    "updatedAt" : ISODate("2020-05-31T16:28:35.587Z"),
+    "__v" : 0
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("5ed4170fdb62f04fac99eba1"),
+    "images" : [],
+    "nickname" : "dzcxxz",
+    "real_name" : "xzczx",
+    "superpowers" : "xzcxz",
+    "catch_phrase" : "zxczx",
+    "origin_description" : "zxczxc",
+    "createdAt" : ISODate("2020-05-31T20:43:59.576Z"),
+    "updatedAt" : ISODate("2020-05-31T20:43:59.576Z"),
+    "__v" : 0
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("5ed4a41d0a10f607c02ba248"),
+    "images" : [],
+    "nickname" : "test1",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:45:50.001Z"),
+    "updatedAt" : ISODate("2020-06-01T06:45:50.001Z"),
+    "__v" : 0
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("5ed4a4250a10f607c02ba249"),
+    "images" : [],
+    "nickname" : "test2",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:45:57.283Z"),
+    "updatedAt" : ISODate("2020-06-01T06:45:57.283Z"),
+    "__v" : 0
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("5ed4a42a0a10f607c02ba24a"),
+    "images" : [],
+    "nickname" : "test3",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:46:02.486Z"),
+    "updatedAt" : ISODate("2020-06-01T06:46:02.486Z"),
+    "__v" : 0
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("5ed4a4350a10f607c02ba24b"),
+    "images" : [],
+    "nickname" : "test4",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:46:13.089Z"),
+    "updatedAt" : ISODate("2020-06-01T06:46:13.089Z"),
+    "__v" : 0
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("5ed4a43a0a10f607c02ba24c"),
+    "images" : [],
+    "nickname" : "test5",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:46:18.394Z"),
+    "updatedAt" : ISODate("2020-06-01T06:46:18.394Z"),
+    "__v" : 0
+}
+
+/* 16 */
+{
+    "_id" : ObjectId("5ed4a43f0a10f607c02ba24d"),
+    "images" : [],
+    "nickname" : "test6",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:46:23.255Z"),
+    "updatedAt" : ISODate("2020-06-01T06:46:23.255Z"),
+    "__v" : 0
+}
+
+/* 17 */
+{
+    "_id" : ObjectId("5ed4a4450a10f607c02ba24e"),
+    "images" : [],
+    "nickname" : "test7",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:46:29.047Z"),
+    "updatedAt" : ISODate("2020-06-01T06:46:29.047Z"),
+    "__v" : 0
+}
+
+/* 18 */
+{
+    "_id" : ObjectId("5ed4a44a0a10f607c02ba24f"),
+    "images" : [],
+    "nickname" : "test8",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:46:34.787Z"),
+    "updatedAt" : ISODate("2020-06-01T06:46:34.787Z"),
+    "__v" : 0
+}
+
+/* 19 */
+{
+    "_id" : ObjectId("5ed4a4500a10f607c02ba250"),
+    "images" : [],
+    "nickname" : "test9",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:46:40.501Z"),
+    "updatedAt" : ISODate("2020-06-01T06:46:40.501Z"),
+    "__v" : 0
+}
+
+/* 20 */
+{
+    "_id" : ObjectId("5ed4a4550a10f607c02ba251"),
+    "images" : [],
+    "nickname" : "test10",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:46:45.895Z"),
+    "updatedAt" : ISODate("2020-06-01T06:46:45.895Z"),
+    "__v" : 0
+}
+
+/* 21 */
+{
+    "_id" : ObjectId("5ed4a45a0a10f607c02ba252"),
+    "images" : [],
+    "nickname" : "test11",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:46:50.305Z"),
+    "updatedAt" : ISODate("2020-06-01T06:46:50.305Z"),
+    "__v" : 0
+}
+
+/* 22 */
+{
+    "_id" : ObjectId("5ed4a45e0a10f607c02ba253"),
+    "images" : [],
+    "nickname" : "test12",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:46:54.743Z"),
+    "updatedAt" : ISODate("2020-06-01T06:46:54.743Z"),
+    "__v" : 0
+}
+
+/* 23 */
+{
+    "_id" : ObjectId("5ed4a4640a10f607c02ba254"),
+    "images" : [],
+    "nickname" : "test13",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:47:00.149Z"),
+    "updatedAt" : ISODate("2020-06-01T06:47:00.149Z"),
+    "__v" : 0
+}
+
+/* 24 */
+{
+    "_id" : ObjectId("5ed4a46a0a10f607c02ba255"),
+    "images" : [],
+    "nickname" : "test14",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:47:06.118Z"),
+    "updatedAt" : ISODate("2020-06-01T06:47:06.118Z"),
+    "__v" : 0
+}
+
+/* 25 */
+{
+    "_id" : ObjectId("5ed4a46e0a10f607c02ba256"),
+    "images" : [],
+    "nickname" : "test15",
+    "real_name" : "test",
+    "superpowers" : "test",
+    "catch_phrase" : "test",
+    "origin_description" : "test",
+    "createdAt" : ISODate("2020-06-01T06:47:10.392Z"),
+    "updatedAt" : ISODate("2020-06-01T06:47:10.392Z"),
+    "__v" : 0
+}

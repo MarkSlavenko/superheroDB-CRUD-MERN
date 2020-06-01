@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Superheroes DB - CRUD (MERN Stack)
 
-## Available Scripts
+## Steps to run the solution:
 
-In the project directory, you can run:
+-  `npm install` in root and server directories;
+-  You need to start MongoDB server (`server/DB/index.js` - you can change port and DB name);
+-  In the server directory - `npm start`;
+-  In the root directory - `npm start`;
+-  To populate the database, use the Add Hero page, or fill out from the file `ForReadme/mongoDB.txt`
 
-### `npm start`
+## Application work example
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Main page:
+![Main page](ForReadme/mainPage.JPG?raw=true)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Pagination:
+![Pagination ](ForReadme/pagination1.JPG?raw=true)
+![Pagination](ForReadme/pagination2.JPG?raw=true)
 
-### `npm test`
+Add hero page:
+![Add hero page](ForReadme/addHeroPage.JPG?raw=true)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+View hero page:
+![View hero page](ForReadme/viewHeroPage.JPG?raw=true)
 
-### `npm run build`
+Edit hero page:
+![Edit hero page](ForReadme/editHeroPage.JPG?raw=true)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Not found page:
+![Not found page](ForReadme/notFoundPage.JPG?raw=true)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Do delete:
+![Not found page](ForReadme/doDelete.JPG?raw=true)
