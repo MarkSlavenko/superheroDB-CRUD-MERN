@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./editHero.css"
-import HeroFields from "../HeroFields";
+import HeroFields from "../../components/HeroFields";
 
 class EditHero extends Component {
 

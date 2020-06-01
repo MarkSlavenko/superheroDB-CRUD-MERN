@@ -4,9 +4,9 @@ import HeroesList from "../../components/HeroesList";
 import { Switch, Route } from 'react-router-dom';
 import {connect} from 'react-redux';
 import NotFound from "../../components/NotFound";
-import AddHero from "../../components/AddHero";
-import EditHero from "../../components/EditHero";
-import ViewHero from "../../components/ViewHero";
+import AddHero from "../AddHero";
+import EditHero from "../EditHero";
+import ViewHero from "../ViewHero";
 import api from '../../API';
 
 import {

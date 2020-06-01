@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import "./heroesList.css";
 import PropTypes from 'prop-types';
 import Hero from "../Hero";
@@ -23,7 +23,7 @@ const HeroesList = (props) => {
                     nickname = {hero.nickname}
                     image = {hero.images ? hero.images[0] : null}
                     delHero={props.delHero}
-                />
+                 />
             ));
         } catch (e) {
             console.error('Error with heroes data!');

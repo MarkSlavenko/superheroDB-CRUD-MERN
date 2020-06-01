@@ -42,6 +42,15 @@ class ViewHero extends Component {
     render() {
         let nickname, real_name, origin_description, superpowers, catch_phrase, images;
         this.state.heroData &&( { nickname, real_name, origin_description, superpowers, catch_phrase, images } = this.state.heroData);
+
+        let imagesForShow;
+        if (images) {
+                imagesForShow = images.map(img => {
+                return <img src={img}/>
+            }
+            )
+        }
+
     return (
         <div>
             {!this.state.isEmpty ?
@@ -52,6 +61,9 @@ class ViewHero extends Component {
                     <h2><span className="title">Superpowers</span> {superpowers}</h2>
                     {catch_phrase && <h2><span className="title">Catch phrase</span> {catch_phrase}</h2>}
                     <h2><span className="title">Hero origin description</span> {origin_description}</h2>
+                    {/*<div className="viewHeroImages">*/}
+                        {/*{imagesForShow}*/}
+                    {/*</div>*/}
                     <div className="viewHero-links">
                         <Link to={'/edit/' + this.state.id}
                               className="btn btn-edit"

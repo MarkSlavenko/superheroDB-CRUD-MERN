@@ -1,6 +1,6 @@
 import React from 'react';
 import "./addHero.css"
-import HeroFields from "../HeroFields";
+import HeroFields from "../../components/HeroFields";
 
 const AddHero = (props) => {
 

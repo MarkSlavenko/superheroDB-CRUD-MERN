@@ -3,12 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7c49092a-9380-450f-abe8-6b504509fb83" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/hero.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HeroFields/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeroFields/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddHero/addHero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/AddHero/addHero.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddHero/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/AddHero/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditHero/editHero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/EditHero/editHero.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditHero/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/EditHero/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeroesList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeroesList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ViewHero/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ViewHero/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ViewHero/viewHero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ViewHero/viewHero.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Content/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Content/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tempDB/index.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,32 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/containers/Content/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/controllers/controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2167">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <marker date="1591010819041" expanded="true" signature="4054:4207" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -119,13 +97,17 @@
         <option value="$PROJECT_DIR$/src/actions/index.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/components/Pagination/index.js" />
-        <option value="$PROJECT_DIR$/src/components/HeroesList/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Content/index.js" />
         <option value="$PROJECT_DIR$/src/components/Header/index.js" />
         <option value="$PROJECT_DIR$/src/components/Hero/hero.css" />
         <option value="$PROJECT_DIR$/src/components/HeroFields/index.js" />
         <option value="$PROJECT_DIR$/server/models/model.js" />
         <option value="$PROJECT_DIR$/server/controllers/controller.js" />
+        <option value="$PROJECT_DIR$/src/containers/AddHero/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/EditHero/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/ViewHero/viewHero.css" />
+        <option value="$PROJECT_DIR$/src/containers/ViewHero/index.js" />
+        <option value="$PROJECT_DIR$/src/components/HeroesList/index.js" />
       </list>
     </option>
   </component>
@@ -151,64 +133,13 @@
             <path>
               <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
               <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
               <item name="superheroes" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="AddHero" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="EditHero" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
@@ -222,34 +153,7 @@
               <item name="superheroes" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="HeroFields" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Pagination" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewHero" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="superheroes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="superheroes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
+              <item name="HeroesList" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,11 +175,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Проекты\superheroes\src\containers" />
       <recent name="D:\Проекты\superheroes\src\pages" />
       <recent name="D:\Проекты\superheroes\public\images" />
       <recent name="D:\Проекты\superheroes\public" />
       <recent name="D:\Проекты\superheroes" />
-      <recent name="D:\Проекты\superheroes\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -308,16 +212,15 @@
       <workItem from="1590860641656" duration="10216000" />
       <workItem from="1590916840807" duration="26915000" />
       <workItem from="1590950692850" duration="10098000" />
-      <workItem from="1590991664678" duration="12989000" />
+      <workItem from="1590991664678" duration="15633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113849000" />
+    <option name="totallyTimeSpent" value="116493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18968935" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -457,16 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Hero/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Footer/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -477,17 +370,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ViewHero/viewHero.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AddHero/addHero.css">
+    <entry file="file://$PROJECT_DIR$/src/containers/AddHero/addHero.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/EditHero/editHero.css">
+    <entry file="file://$PROJECT_DIR$/src/containers/EditHero/editHero.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
@@ -553,16 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/EditHero/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="6" selection-start-line="6" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Pagination/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -583,40 +459,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HeroesList/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ViewHero/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Content/Content.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AddHero/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -628,13 +474,6 @@
             <element signature="e#0#39#0" expanded="true" />
             <marker date="1591010766122" expanded="true" signature="4941:5494" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Hero/hero.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -665,10 +504,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/EditHero/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/AddHero/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Content/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        <state relative-caret-position="-629">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Hero/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Hero/hero.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/ViewHero/viewHero.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HeroesList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/ViewHero/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="47" column="51" lean-forward="true" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
