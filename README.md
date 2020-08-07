@@ -4,7 +4,7 @@
 
 -  `npm install` in root and server directories;
 -  You need to start MongoDB server (`server/DB/index.js` - you can change port and DB name);
--  In the server directory - `npm start`;
+-  In the server directory - `node index.js`;
 -  In the root directory - `npm start`;
 -  To populate the database, use the Add Hero page, or fill out from the file `ForReadme/mongoDB.txt`
 
